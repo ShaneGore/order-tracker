@@ -1,0 +1,12 @@
+apiVersion: 1
+
+contactPoints:
+  - orgId: 1
+    name: order-tracker-incident-responder
+    receivers:
+      - uid: order-tracker-responder
+        type: webhook
+        disableResolveMessage: true
+        settings:
+          url: http://host.docker.internal:8001/alerts
+          httpMethod: POST

@@ -1,0 +1,3 @@
+Iâ€™ll inspect the order-detail date calculation in `app/main.py` and make only the targeted fix.
+
+The 500s were caused by `order_detail()` adding two days with `datetime.replace(day=...)`, which fails when the estimate crosses a month boundary. I changed it to add `timedelta(days=2)`, which handles month and year transitions. Only `app/main.py` was modified; I did not run shell commands or tests.

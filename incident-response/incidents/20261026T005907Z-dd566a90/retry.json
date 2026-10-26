@@ -1,0 +1,20 @@
+{
+  "finished_at": "2026-10-26T01:05:34.966397+00:00",
+  "incidents": [
+    {
+      "copilot_status": "completed",
+      "files": [
+        "alert.json",
+        "evidence.json",
+        "copilot-response.txt",
+        "execution.json"
+      ],
+      "incident_dir": "C:\\Users\\Shane\\Documents\\Coding Projects\\AI_devs_2026\\order-tracker\\incident-response\\incidents\\20261026T010516Z-c0e632ab",
+      "incident_id": "20261026T010516Z-c0e632ab",
+      "status": "processed"
+    }
+  ],
+  "retried_from": "20261026T005907Z-dd566a90",
+  "started_at": "2026-10-26T01:05:16.787769+00:00",
+  "status": "finished"
+}

@@ -33,3 +33,19 @@ def test_create_and_update_order(client):
 
 def test_missing_order(client):
     assert client.get("/api/orders/missing").status_code == 404
+
+
+def test_unexpected_error_returns_500(client, monkeypatch):
+    def boom(*args, **kwargs):
+        raise RuntimeError("database unavailable")
+
+    monkeypatch.setattr(main, "connect", boom)
+    response = client.get("/api/orders/standard-1001")
+    assert response.status_code == 500
+
+
+def test_telemetry_providers_are_configured():
+    assert main.tracer is not None
+    assert main.meter is not None
+    assert main.logger is not None
+    assert main.order_lookup_counter is not None

@@ -1,0 +1,231 @@
+{
+  "affected_endpoint": "/api/orders/{order_id}",
+  "alert_name": "Order Tracker HTTP 5xx responses",
+  "alert_status": "firing",
+  "grafana_status": "firing",
+  "loki": {
+    "error": null,
+    "logs": [
+      {
+        "labels": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "get_order",
+          "code_line_number": "249",
+          "detected_level": "error",
+          "exception_message": "day is out of range for month",
+          "exception_stacktrace": "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 204, in get_order\n    result = fetch_order(order_id)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 193, in fetch_order\n    return order_detail(row)\n           ^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 145, in order_detail\n    estimated_at = placed_at.replace(day=placed_at.day + 2)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n",
+          "exception_type": "ValueError",
+          "flags": "3",
+          "observed_timestamp": "1792975615781132019",
+          "order_id": "express-1002",
+          "route": "/api/orders/{order_id}",
+          "scope_name": "order-tracker",
+          "service_instance_id": "3fafa62b-dba9-4f13-8275-d26442aeb19d",
+          "service_name": "order-tracker",
+          "severity_number": "17",
+          "severity_text": "ERROR",
+          "span_id": "556c965bd8073ff5",
+          "status_code": "500",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.1",
+          "trace_id": "4dacecdbbbda24bef3825389ef2f977a"
+        },
+        "line": "Order lookup failed unexpectedly",
+        "timestamp": "1792975615780717312"
+      },
+      {
+        "labels": {
+          "code_file_path": "C:\\Users\\Shane\\Documents\\Coding Projects\\AI_devs_2026\\order-tracker\\app\\main.py",
+          "code_function_name": "get_order",
+          "code_line_number": "208",
+          "detected_level": "info",
+          "flags": "3",
+          "observed_timestamp": "1792975357763591200",
+          "order_id": "4e351029-48f7-495d-9d21-a16ccc3b9a1f",
+          "route": "/api/orders/{order_id}",
+          "scope_name": "order-tracker",
+          "service_instance_id": "008d5c46-edee-4aab-830a-827ffb94d312",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "span_id": "270bfdb24db23a0c",
+          "status_code": "200",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.1",
+          "trace_id": "ea957c0d4268122497db8ce7a92404e6"
+        },
+        "line": "Order lookup succeeded",
+        "timestamp": "1792975357763527424"
+      },
+      {
+        "labels": {
+          "code_file_path": "C:\\Users\\Shane\\Documents\\Coding Projects\\AI_devs_2026\\order-tracker\\app\\main.py",
+          "code_function_name": "get_order",
+          "code_line_number": "208",
+          "detected_level": "info",
+          "flags": "3",
+          "observed_timestamp": "1792975372150234400",
+          "order_id": "fe3e68ad-4cc4-48fc-b43d-b59c127a0643",
+          "route": "/api/orders/{order_id}",
+          "scope_name": "order-tracker",
+          "service_instance_id": "a9b387bd-f27a-428c-be92-915828738c75",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "span_id": "4474c31e992a863b",
+          "status_code": "200",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.1",
+          "trace_id": "a67813ff711e3b808bac865ce58867ad"
+        },
+        "line": "Order lookup succeeded",
+        "timestamp": "1792975372150174464"
+      },
+      {
+        "labels": {
+          "code_file_path": "C:\\Users\\Shane\\Documents\\Coding Projects\\AI_devs_2026\\order-tracker\\app\\main.py",
+          "code_function_name": "get_order",
+          "code_line_number": "234",
+          "detected_level": "warn",
+          "flags": "3",
+          "observed_timestamp": "1792975358072606800",
+          "order_id": "missing",
+          "route": "/api/orders/{order_id}",
+          "scope_name": "order-tracker",
+          "service_instance_id": "008d5c46-edee-4aab-830a-827ffb94d312",
+          "service_name": "order-tracker",
+          "severity_number": "13",
+          "severity_text": "WARN",
+          "span_id": "95bdf410fd0a6b9e",
+          "status_code": "404",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.1",
+          "trace_id": "dfc527a4e7e3c33a47b4419fc2c6fbd7"
+        },
+        "line": "Order lookup failed",
+        "timestamp": "1792975358072560896"
+      },
+      {
+        "labels": {
+          "code_file_path": "C:\\Users\\Shane\\Documents\\Coding Projects\\AI_devs_2026\\order-tracker\\app\\main.py",
+          "code_function_name": "get_order",
+          "code_line_number": "234",
+          "detected_level": "warn",
+          "flags": "3",
+          "observed_timestamp": "1792975372460108300",
+          "order_id": "missing",
+          "route": "/api/orders/{order_id}",
+          "scope_name": "order-tracker",
+          "service_instance_id": "a9b387bd-f27a-428c-be92-915828738c75",
+          "service_name": "order-tracker",
+          "severity_number": "13",
+          "severity_text": "WARN",
+          "span_id": "7415c15342df9102",
+          "status_code": "404",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.1",
+          "trace_id": "c3a8875e4a05e52374859c926b691fdd"
+        },
+        "line": "Order lookup failed",
+        "timestamp": "1792975372460068096"
+      }
+    ],
+    "query": "{service_name=\"order-tracker\"}",
+    "time_range": {
+      "end": 1792975640,
+      "start": 1792975340
+    }
+  },
+  "prometheus": {
+    "http_5xx_total_5m": {
+      "error": null,
+      "query": "sum(increase(http_server_requests_total{http_response_status_code=~\"5..\"}[5m])) or vector(0)",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1792976717.28,
+            "0"
+          ]
+        }
+      ],
+      "result_type": "vector"
+    },
+    "http_requests_by_status_5m": {
+      "error": null,
+      "query": "sum by (http_response_status_code) (increase(http_server_requests_total[5m]))",
+      "result": [
+        {
+          "metric": {
+            "http_response_status_code": "200"
+          },
+          "value": [
+            1792976717.284,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "http_response_status_code": "404"
+          },
+          "value": [
+            1792976717.284,
+            "0"
+          ]
+        },
+        {
+          "metric": {
+            "http_response_status_code": "500"
+          },
+          "value": [
+            1792976717.284,
+            "0"
+          ]
+        }
+      ],
+      "result_type": "vector"
+    }
+  },
+  "tempo": {
+    "error": null,
+    "search_query": "service.name=order-tracker",
+    "time_range": {
+      "end": 1792975640,
+      "start": 1792975340
+    },
+    "traces": [
+      {
+        "duration_ms": 14,
+        "root_name": "GET /api/orders/{order_id}",
+        "root_service": "order-tracker",
+        "spans": [
+          {
+            "attributes": {
+              "http.request.method": "GET",
+              "http.response.status_code": "500",
+              "http.route": "/api/orders/{order_id}",
+              "order.id": "express-1002"
+            },
+            "name": "GET /api/orders/{order_id}",
+            "status": "STATUS_CODE_ERROR"
+          }
+        ],
+        "start_time_unix_nano": "1792975615775393074",
+        "start_time_utc": "2026-10-26T00:46:55.775393+00:00",
+        "trace_id": "4dacecdbbbda24bef3825389ef2f977a"
+      }
+    ]
+  },
+  "time_window": {
+    "alert_ends_at": "0001-01-01T00:00:00Z",
+    "alert_starts_at": "2026-10-26T00:47:20Z",
+    "duration_minutes": 5,
+    "end": "2026-10-26T00:47:20+00:00",
+    "start": "2026-10-26T00:42:20+00:00"
+  }
+}
